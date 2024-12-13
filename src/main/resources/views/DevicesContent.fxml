@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="980.0" style="-fx-background-color: #f4e9e2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DevicesController">
+
+    <!-- Header Section -->
+    <AnchorPane prefHeight="55.0" prefWidth="980.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-width: 0 0 1 0;">
+        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Devices Dashboard" />
+        <Label layoutX="192.0" layoutY="19.0" style="-fx-font-size: 12px; -fx-text-fill: #777;" text="Manage Your Connected Devices" />
+        <Button layoutX="870.0" layoutY="13.0" style="-fx-font-size: 14px; -fx-background-color: #c8a582; -fx-text-fill: white; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Add Device" />
+    </AnchorPane>
+
+    <!-- Sidebar Section -->
+    <VBox layoutX="0.0" layoutY="55.0" prefHeight="645.0" prefWidth="225.0" style="-fx-background-color: #f0e5e0; -fx-padding: 20px; -fx-spacing: 15px;">
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="All Devices" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Active Devices" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Offline Devices" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Device Groups" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Troubleshooting" />
+        <Region prefHeight="30" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Settings" />
+    </VBox>
+
+    <!-- Main Content Area -->
+    <AnchorPane layoutX="225.0" layoutY="68.0" prefHeight="620.0" prefWidth="730.0">
+
+        <!-- Row 1: Device Summary -->
+        <HBox layoutX="0.0" layoutY="0.0" spacing="20.0" />
+
+        <!-- Row 2: Device List -->
+        <VBox layoutX="318.0" layoutY="55.0" spacing="15.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-padding: 20px;">
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Device List" />
+
+            <HBox spacing="15.0" style="-fx-padding: 10px; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #f9f9f9;">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@device_icon.png" />
+                </ImageView>
+                <VBox>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Smart Light" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #777;" text="Living Room - Online" />
+                </VBox>
+                <Button layoutX="350.0" style="-fx-background-color: #c8a582; -fx-text-fill: white;" text="Details" />
+            </HBox>
+
+            <HBox spacing="15.0" style="-fx-padding: 10px; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #f9f9f9;">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@device_icon.png" />
+                </ImageView>
+                <VBox>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Smart Thermostat" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #777;" text="Bedroom - Offline" />
+                </VBox>
+                <Button layoutX="350.0" style="-fx-background-color: #c8a582; -fx-text-fill: white;" text="Details" />
+            </HBox>
+        </VBox>
+
+        <!-- Row 3: Device Actions -->
+        <HBox layoutX="0.0" layoutY="430.0" spacing="20.0" />
+         <AnchorPane layoutX="23.0" layoutY="224.0" prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
+             <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Active Devices" />
+             <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 36px; -fx-text-fill: #555;" text="12" />
+         </AnchorPane>
+         <AnchorPane layoutX="23.0" layoutY="405.0" prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
+             <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Offline Devices" />
+             <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 36px; -fx-text-fill: #555;" text="3" />
+         </AnchorPane>
+         <AnchorPane layoutX="318.0" layoutY="322.0" prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-padding: 15;">
+             <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Quick Actions" />
+             <Button layoutX="15.0" layoutY="40.0" style="-fx-background-color: #c8a582; -fx-text-fill: white;" text="Turn Off All" />
+         </AnchorPane>
+         <AnchorPane layoutX="23.0" layoutY="55.0" prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
+             <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Total Devices" />
+             <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 36px; -fx-text-fill: #555;" text="15" />
+         </AnchorPane>
+
+    </AnchorPane>
+</AnchorPane>
