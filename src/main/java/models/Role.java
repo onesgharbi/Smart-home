@@ -1,4 +1,5 @@
-package Controller;
+package models;
+
 
 
 public enum Role {
@@ -6,4 +7,3 @@ public enum Role {
     TECHNICIAN,
     SECURITY_GUARD
 }
-

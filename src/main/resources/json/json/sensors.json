@@ -1,0 +1,22 @@
+[
+  {
+    "id": "T1",
+    "type": "TEMPERATURE",
+    "location": "Living Room"
+  },
+  {
+    "id": "H1",
+    "type": "HUMIDITY",
+    "location": "Bedroom"
+  },
+  {
+    "id": "M1",
+    "type": "MOTION",
+    "location": "Front Door"
+  },
+  {
+    "id": "L1",
+    "type": "LIGHTING",
+    "location": "Kitchen"
+  }
+]

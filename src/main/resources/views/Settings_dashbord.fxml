@@ -2,103 +2,69 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Pos?>
 
-<AnchorPane prefWidth="980.0" prefHeight="700.0" style="-fx-background-color: #f5f5dc;">
+<AnchorPane prefHeight="720.0" prefWidth="986.0" style="-fx-background-color: #f4e9e2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SettingsController">
+
     <!-- Header Section -->
-    <AnchorPane prefHeight="60.0" prefWidth="980.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-width: 0 0 1 0;">
-        <Label layoutX="20.0" layoutY="20.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Settings Dashboard" />
-        <Label layoutX="160.0" layoutY="24.0" style="-fx-font-size: 12px; -fx-text-fill: #8a6750;" text="Manage Device and User Preferences" />
-        <Button layoutX="850.0" layoutY="15.0" style="-fx-background-color: #800000; -fx-text-fill: white; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Save Changes"/>
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="60.0" prefWidth="1024.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-width: 0 0 1 0;">
+        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Smart Home Settings" />
+        <Label layoutX="218.0" layoutY="21.0" style="-fx-font-size: 12px; -fx-text-fill: #777;" text="Configure your home system settings" />
     </AnchorPane>
 
     <!-- Sidebar Section -->
-    <VBox layoutX="0.0" layoutY="60.0" prefHeight="640.0" prefWidth="220.0" style="-fx-background-color: #e8e1cf; -fx-padding: 20px; -fx-spacing: 20px;">
-        <Button text="General Settings" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" />
-        <Button text="Notifications" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" />
-        <Button text="Privacy" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" />
-        <Button text="Account Settings" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" />
-        <Region prefHeight="30" />
-        <Button text="Logout" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" />
+    <VBox alignment="TOP_CENTER" layoutX="0.0" layoutY="60.0" prefHeight="421.0" prefWidth="241.0" style="-fx-background-color: #f0e5e0; -fx-padding: 20px; -fx-spacing: 20px;">
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Dashboard" />
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Devices" />
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Lighting" />
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Temperature" />
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Security" />
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Settings" />
+        <Button prefWidth="220" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Logout" />
     </VBox>
 
-    <!-- Main Content Area -->
-    <AnchorPane layoutX="220.0" layoutY="60.0" prefHeight="640.0" prefWidth="760.0">
+    <!-- Main Content Section -->
+    <HBox layoutX="300.0" layoutY="85.0" prefHeight="197.0" prefWidth="574.0" spacing="30.0">
 
-        <!-- Section 1: General Settings -->
-        <AnchorPane layoutY="0.0" prefHeight="150.0" prefWidth="760.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
-            <Label layoutX="20.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="General Settings" />
-            <VBox layoutX="20.0" layoutY="50.0" spacing="15.0">
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Language: " />
-                    <ComboBox fx:id="languageComboBox" promptText="Select Language" style="-fx-font-size: 14px; -fx-text-fill: #5c2c2c;">
-                        <items>
-                            <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="English" />
-                                <String fx:value="Spanish" />
-                                <String fx:value="French" />
-                            </FXCollections>
-                        </items>
-                    </ComboBox>
-                </HBox>
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Time Format: " />
-                    <ComboBox fx:id="timeFormatComboBox" promptText="Select Time Format" style="-fx-font-size: 14px; -fx-text-fill: #5c2c2c;">
-                        <items>
-                            <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="12-hour" />
-                                <String fx:value="24-hour" />
-                            </FXCollections>
-                        </items>
-                    </ComboBox>
-                </HBox>
-            </VBox>
+        <!-- User Preferences Widget -->
+        <AnchorPane prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 15px;">
+            <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="User Preferences" />
+            <Button layoutX="10.0" layoutY="50.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Change Language" />
+            <Button layoutX="10.0" layoutY="90.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Change Theme" />
         </AnchorPane>
 
-        <!-- Section 2: Notification Settings -->
-        <AnchorPane layoutY="170.0" prefHeight="150.0" prefWidth="760.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
-            <Label layoutX="20.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Notification Settings" />
-            <VBox layoutX="20.0" layoutY="50.0" spacing="15.0">
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Email Notifications: " />
-                    <CheckBox fx:id="emailNotificationsCheckBox" text="Enable Email Notifications" />
-                </HBox>
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Push Notifications: " />
-                    <CheckBox fx:id="pushNotificationsCheckBox" text="Enable Push Notifications" />
-                </HBox>
-            </VBox>
+        <!-- Device Settings Widget -->
+        <AnchorPane prefHeight="180.0" prefWidth="177.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 15px;">
+            <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Device Settings" />
+            <Button layoutX="10.0" layoutY="50.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Add New Device" />
+            <Button layoutX="10.0" layoutY="90.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Manage Devices" />
         </AnchorPane>
 
-        <!-- Section 3: Privacy Settings -->
-        <AnchorPane layoutY="340.0" prefHeight="150.0" prefWidth="760.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
-            <Label layoutX="20.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Privacy Settings" />
-            <VBox layoutX="20.0" layoutY="50.0" spacing="15.0">
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Location Access: " />
-                    <ToggleButton fx:id="locationAccessToggle" text="Enable Location Access" />
-                </HBox>
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Data Sharing: " />
-                    <ToggleButton fx:id="dataSharingToggle" text="Enable Data Sharing" />
-                </HBox>
-            </VBox>
-        </AnchorPane>
+    </HBox>
 
-        <!-- Section 4: Account Settings -->
-        <AnchorPane layoutY="510.0" prefHeight="150.0" prefWidth="760.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
-            <Label layoutX="20.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Account Settings" />
-            <VBox layoutX="20.0" layoutY="50.0" spacing="15.0">
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Change Password: " />
-                    <Button style="-fx-background-color: #800000; -fx-text-fill: white; -fx-border-radius: 5px;" text="Change" />
-                </HBox>
-                <HBox spacing="15.0">
-                    <Label style="-fx-font-size: 16px; -fx-text-fill: #5c2c2c;" text="Delete Account: " />
-                    <Button style="-fx-background-color: #800000; -fx-text-fill: white; -fx-border-radius: 5px;" text="Delete" />
-                </HBox>
-            </VBox>
-        </AnchorPane>
-
+    <!-- Footer Section -->
+    <AnchorPane layoutX="0.0" layoutY="670.0" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-width: 1 0 0 0;">
+        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 12px; -fx-text-fill: #777;" />
     </AnchorPane>
+
+    <!-- Notification Settings Widget -->
+    <AnchorPane layoutX="300.0" layoutY="301.0" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 15px;">
+        <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Notification Settings" />
+        <Button layoutX="10.0" layoutY="50.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Email Notifications" />
+        <Button layoutX="10.0" layoutY="90.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Push Notifications" />
+    </AnchorPane>
+
+    <!-- New Widget - Account Settings -->
+    <AnchorPane layoutX="602.0" layoutY="301.0" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 15px;">
+        <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Account Settings" />
+        <Button layoutX="10.0" layoutY="50.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Change Password" />
+        <Button layoutX="10.0" layoutY="90.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Manage Profile" />
+    </AnchorPane>
+
+    <!-- New Widget - Help Section -->
+    <AnchorPane layoutX="292.0" layoutY="521.0" prefHeight="109.0" prefWidth="582.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 15px;">
+        <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Help" />
+        <Button layoutX="10.0" layoutY="50.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Help Center" />
+        <Button layoutX="320.0" layoutY="50.0" prefWidth="230.0" style="-fx-background-color: #f5f5f5; -fx-font-size: 14px; -fx-text-fill: #333; -fx-border-radius: 8px;" text="Contact Support" />
+    </AnchorPane>
+
 </AnchorPane>

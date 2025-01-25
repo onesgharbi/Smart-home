@@ -1,51 +1,91 @@
 package Controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
-
-import java.io.IOException;
 
 public class LoginController {
-    @FXML private TextField usernameField;
-    @FXML private PasswordField passwordField;
 
-    public void handleLogin(ActionEvent event) {
-        String username = usernameField.getText();
+    @FXML
+    private TextField emailField;
+
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private CheckBox rememberCheckBox;
+
+    @FXML
+    private Button loginButton;
+
+    @FXML
+    private Button googleSignInButton;
+
+    @FXML
+    private Button appleSignInButton;
+
+    @FXML
+    private Hyperlink signUpLink;
+
+    @FXML
+    private Label feedbackLabel; // Optional: Add a label for displaying feedback to the user
+
+    // Method called when the login button is clicked
+    @FXML
+    private void handleLoginAction() {
+        String email = emailField.getText();
         String password = passwordField.getText();
+        boolean remember = rememberCheckBox.isSelected();
 
-        String role = validateUser(username, password);
+        if (email.isEmpty() || password.isEmpty()) {
+            showFeedback("Please fill in all fields.");
+            return;
+        }
 
-        if ("Homeowner".equals(role)) {
-            loadDashboard("/views/homeowner_dashboard.fxml");
-        } else if ("Security Guard".equals(role)) {
-            loadDashboard("/views/security_guard_dashboard.fxml");
-        } else if ("Technician".equals(role)) {
-            loadDashboard("/views/technician_dashboard.fxml");
+        if (validateCredentials(email, password)) {
+            showFeedback("Login successful!");
+            // Redirect to another page or dashboard
         } else {
-            System.out.println("Invalid credentials");
+            showFeedback("Invalid email or password.");
         }
     }
 
-    private String validateUser(String username, String password) {
-        if ("homeowner".equals(username) && "password".equals(password)) return "Homeowner";
-        if ("guard".equals(username) && "password".equals(password)) return "Security Guard";
-        if ("technician".equals(username) && "password".equals(password)) return "Technician";
-        return null;
+    // Method called when the Google Sign-In button is clicked
+    @FXML
+    private void handleGoogleSignInAction() {
+        // Implement Google Sign-In logic here
+        showFeedback("Google Sign-In clicked.");
     }
 
-    private void loadDashboard(String fxmlPath) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
-            Stage stage = (Stage) usernameField.getScene().getWindow();
-            stage.setScene(new Scene(root));
-        } catch (IOException e) {
-            e.printStackTrace();
+    // Method called when the Apple Sign-In button is clicked
+    @FXML
+    private void handleAppleSignInAction() {
+        // Implement Apple Sign-In logic here
+        showFeedback("Apple Sign-In clicked.");
+    }
+
+    // Method called when the Sign-Up link is clicked
+    @FXML
+    private void handleSignUpLinkAction() {
+        // Redirect to the Sign-Up page
+        showFeedback("Redirecting to Sign-Up page...");
+    }
+
+    // Optional: Utility method to validate email and password
+    private boolean validateCredentials(String email, String password) {
+        // Add your email and password validation logic here
+        // This is just a placeholder; replace with actual validation logic
+        return email.equals("user@example.com") && password.equals("password123");
+    }
+
+    // Optional: Display feedback to the user
+    private void showFeedback(String message) {
+        if (feedbackLabel != null) {
+            feedbackLabel.setText(message);
         }
     }
 }

@@ -1,0 +1,135 @@
+[
+  {
+    "id": "U1",
+    "name": "John Doe",
+    "role": "HOMEOWNER",
+    "phone": "123456789",
+    "address": "123 Elm Street, Springfield",
+    "supervisors": ["S1"],
+    "clinicalUser": "C1",
+    "sensorIds": ["T1", "H1"]
+  },
+  {
+    "id": "U2",
+    "name": "Jane Smith",
+    "role": "HOMEOWNER",
+    "phone": "234567890",
+    "address": "456 Oak Avenue, Springfield",
+    "supervisors": ["S2"],
+    "clinicalUser": "C2",
+    "sensorIds": ["M1", "L1"]
+  },
+  {
+    "id": "U3",
+    "name": "Alex Brown",
+    "role": "HOMEOWNER",
+    "phone": "345678901",
+    "address": "789 Pine Road, Springfield",
+    "supervisors": ["S3", "S1"],
+    "clinicalUser": "C1",
+    "sensorIds": ["T1", "L1"]
+  },
+  {
+    "id": "U4",
+    "name": "Emily Davis",
+    "role": "HOMEOWNER",
+    "phone": "456789012",
+    "address": "101 Maple Street, Springfield",
+    "supervisors": ["S2"],
+    "clinicalUser": "C2",
+    "sensorIds": ["H1", "M1"]
+  },
+  {
+    "id": "U5",
+    "name": "Daniel Lee",
+    "role": "HOMEOWNER",
+    "phone": "567890123",
+    "address": "202 Birch Lane, Springfield",
+    "supervisors": ["S4"],
+    "clinicalUser": "C1",
+    "sensorIds": ["T1", "M1"]
+  },
+  {
+    "id": "U6",
+    "name": "Sophia Wilson",
+    "role": "HOMEOWNER",
+    "phone": "678901234",
+    "address": "303 Cedar Drive, Springfield",
+    "supervisors": ["S3"],
+    "clinicalUser": "C2",
+    "sensorIds": ["L1"]
+  },
+  {
+    "id": "U7",
+    "name": "Lucas Miller",
+    "role": "HOMEOWNER",
+    "phone": "789012345",
+    "address": "404 Redwood Blvd, Springfield",
+    "supervisors": ["S4"],
+    "clinicalUser": "C1",
+    "sensorIds": ["T1"]
+  },
+  {
+    "id": "U8",
+    "name": "Mia Garcia",
+    "role": "HOMEOWNER",
+    "phone": "890123456",
+    "address": "505 Aspen Way, Springfield",
+    "supervisors": ["S1", "S2"],
+    "clinicalUser": "C2",
+    "sensorIds": ["H1"]
+  },
+  {
+    "id": "U9",
+    "name": "William Clark",
+    "role": "HOMEOWNER",
+    "phone": "901234567",
+    "address": "606 Willow Court, Springfield",
+    "supervisors": ["S3"],
+    "clinicalUser": "C1",
+    "sensorIds": ["M1"]
+  },
+  {
+    "id": "S1",
+    "name": "James Anderson",
+    "role": "SUPERVISOR",
+    "phone": "987654321",
+    "address": "789 Cedar Street, Springfield"
+  },
+  {
+    "id": "S2",
+    "name": "Olivia Johnson",
+    "role": "SUPERVISOR",
+    "phone": "876543210",
+    "address": "890 Pine Road, Springfield"
+  },
+  {
+    "id": "S3",
+    "name": "Michael Brown",
+    "role": "SUPERVISOR",
+    "phone": "765432109",
+    "address": "234 Oak Avenue, Springfield"
+  },
+  {
+    "id": "S4",
+    "name": "Isabella Harris",
+    "role": "SUPERVISOR",
+    "phone": "654321098",
+    "address": "345 Maple Drive, Springfield"
+  },
+  {
+    "id": "C1",
+    "name": "Dr. David Wilson",
+    "role": "CLINICAL_USER",
+    "phone": "112233445",
+    "address": "Medical Center, Springfield"
+  },
+  {
+    "id": "C2",
+    "name": "Dr. Lisa Miller",
+    "role": "CLINICAL_USER",
+    "phone": "223344556",
+    "address": "Clinic, Springfield"
+  }
+]
+

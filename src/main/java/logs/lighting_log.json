@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": "2025-01-22T18:00:00",
+    "sensorId": "L1",
+    "brightness": 75
+  },
+  {
+    "timestamp": "2025-01-23T19:00:00",
+    "sensorId": "L1",
+    "brightness": 80
+  },
+  {
+    "timestamp": "2025-01-24T20:00:00",
+    "sensorId": "L1",
+    "brightness": 85
+  }
+]

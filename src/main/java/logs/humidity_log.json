@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": "2025-01-22T09:00:00",
+    "sensorId": "H1",
+    "value": 55
+  },
+  {
+    "timestamp": "2025-01-23T09:30:00",
+    "sensorId": "H1",
+    "value": 57
+  },
+  {
+    "timestamp": "2025-01-24T10:00:00",
+    "sensorId": "H1",
+    "value": 60
+  }
+]

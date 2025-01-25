@@ -5,23 +5,23 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="980.0" style="-fx-background-color: #f5f5dc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HumidityController">
+<AnchorPane prefHeight="700.0" prefWidth="980.0" style="-fx-background-color: #f4e9e2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HumidityController">
 
     <!-- Header Section -->
-    <AnchorPane prefHeight="55.0" prefWidth="980.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-width: 0 0 1 0;">
-        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Humidity Dashboard" />
-        <Label layoutX="150.0" layoutY="19.0" style="-fx-font-size: 12px; -fx-text-fill: #8a6750;" text="          Monitor and Control Humidity Levels" />
-        <Button layoutX="850.0" layoutY="13.0" style="-fx-font-size: 14px; -fx-background-color: #800000; -fx-text-fill: white; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Add Device" />
+    <AnchorPane prefHeight="55.0" prefWidth="980.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-width: 0 0 1 0;">
+        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Humidity Dashboard" />
+        <Label layoutX="150.0" layoutY="19.0" style="-fx-font-size: 12px; -fx-text-fill: #777;" text="Monitor and Control Humidity Levels" />
+        <Button layoutX="850.0" layoutY="13.0" style="-fx-font-size: 14px; -fx-background-color: #c8a582; -fx-text-fill: white; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Add Device" />
     </AnchorPane>
 
     <!-- Sidebar Section -->
-    <VBox layoutX="0.0" layoutY="55.0" prefHeight="645.0" prefWidth="225.0" style="-fx-background-color: #e8e1cf; -fx-padding: 20px; -fx-spacing: 15px;">
-        <Button prefWidth="180" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" text="All Devices" />
-        <Button prefWidth="180" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" text="Living Room" />
-        <Button prefWidth="180" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" text="Bedroom" />
-        <Button prefWidth="180" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" text="Kitchen" />
+    <VBox layoutX="0.0" layoutY="55.0" prefHeight="645.0" prefWidth="225.0" style="-fx-background-color: #f0e5e0; -fx-padding: 20px; -fx-spacing: 15px;">
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="All Devices" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Living Room" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Bedroom" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Kitchen" />
         <Region prefHeight="30" />
-        <Button prefWidth="180" style="-fx-background-color: #ffffff; -fx-font-size: 16px; -fx-border-color: #d9cdbf; -fx-border-radius: 10px; -fx-text-fill: #5c2c2c;" text="Settings" />
+        <Button prefWidth="180" style="-fx-background-color: #fff; -fx-font-size: 16px; -fx-border-color: #ddd; -fx-border-radius: 10px;" text="Settings" />
     </VBox>
 
     <!-- Main Content Area -->
@@ -29,53 +29,52 @@
 
         <!-- Section 1: Humidity Summary -->
         <HBox layoutX="0.0" layoutY="0.0" spacing="20.0">
-            <AnchorPane prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
-                <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Average Humidity" />
-                <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 40px; -fx-text-fill: #800000;" text="55%" />
+            <AnchorPane prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
+                <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Average Humidity" />
+                <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 40px; -fx-text-fill: #c8a582;" text="55%" />
             </AnchorPane>
-            <AnchorPane prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
-                <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Highest Humidity" />
-                <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 40px; -fx-text-fill: #800000;" text="70%" />
+            <AnchorPane prefHeight="130.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
+                <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Highest Humidity" />
+                <Label layoutX="15.0" layoutY="50.0" style="-fx-font-size: 40px; -fx-text-fill: #c8a582;" text="70%" />
             </AnchorPane>
         </HBox>
 
         <!-- Section 2: Humidity Trends -->
-        <AnchorPane layoutX="0.0" layoutY="150.0" prefHeight="236.0" prefWidth="757.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
-            <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Humidity Trends" />
+        <AnchorPane layoutX="0.0" layoutY="150.0" prefHeight="236.0" prefWidth="757.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
+            <Label layoutX="15.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Humidity Trends" />
             <LineChart fx:id="humidityChart" layoutX="15.0" layoutY="40.0" prefHeight="200.0" prefWidth="700.0" title="Humidity Over Time">
                 <xAxis>
-                    <CategoryAxis label="Time (Days)" prefHeight="67.0" prefWidth="622.0" side="BOTTOM" />
+                    <CategoryAxis label="Time (Days)" />
                 </xAxis>
                 <yAxis>
-                    <NumberAxis label="Humidity (%)" side="LEFT" />
+                    <NumberAxis label="Humidity (%)" />
                 </yAxis>
             </LineChart>
         </AnchorPane>
 
         <!-- Section 3: Individual Device Status -->
         <VBox layoutX="0.0" layoutY="420.0" spacing="15.0">
-            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Individual Devices" />
-
-            <HBox spacing="15.0" style="-fx-padding: 10px; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #ffffff;">
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Individual Devices" />
+            <HBox spacing="15.0" style="-fx-padding: 10px; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #ffffff;">
                 <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                     <Image url="@humidity_icon.png" />
                 </ImageView>
                 <VBox>
-                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Living Room Humidifier" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: #8a6750;" text="Status: On" />
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Living Room Humidifier" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #777;" text="Status: On" />
                 </VBox>
-                <ToggleButton layoutX="350.0" style="-fx-background-color: #800000; -fx-text-fill: white;" text="Toggle" />
+                <ToggleButton layoutX="350.0" style="-fx-background-color: #c8a582; -fx-text-fill: white;" text="Toggle" />
             </HBox>
 
-            <HBox spacing="15.0" style="-fx-padding: 10px; -fx-border-color: #d9cdbf; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #ffffff;">
+            <HBox spacing="15.0" style="-fx-padding: 10px; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #ffffff;">
                 <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                     <Image url="@humidity_icon.png" />
                 </ImageView>
                 <VBox>
-                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #5c2c2c;" text="Bedroom Humidifier" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: #8a6750;" text="Status: Off" />
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Bedroom Humidifier" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #777;" text="Status: Off" />
                 </VBox>
-                <ToggleButton layoutX="350.0" style="-fx-background-color: #800000; -fx-text-fill: white;" text="Toggle" />
+                <ToggleButton layoutX="350.0" style="-fx-background-color: #c8a582; -fx-text-fill: white;" text="Toggle" />
             </HBox>
         </VBox>
     </AnchorPane>

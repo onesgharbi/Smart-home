@@ -1,26 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
 <AnchorPane prefHeight="668.0" prefWidth="978.0" style="-fx-background-color: #f4e9e2;" xmlns="http://javafx.com/javafx/17.0.2-ea">
     <!-- Header Section -->
     <AnchorPane prefHeight="55.0" prefWidth="978.0" style="-fx-background-color: #ffffff;">
-        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" text="Support Dashboard" />
+        <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Support Dashboard" />
     </AnchorPane>
 
     <!-- Sidebar Section -->
     <VBox alignment="TOP_CENTER" layoutY="55.0" prefHeight="613.0" prefWidth="227.0" style="-fx-background-color: #f0e5e0; -fx-padding: 20px; -fx-spacing: 15px;">
-        <Button prefWidth="200" style="-fx-background-color: #fff;" text="Dashboard" />
-        <Button prefWidth="200" style="-fx-background-color: #fff;" text="Devices" />
-        <Button prefWidth="200" style="-fx-background-color: #fff;" text="Lights" />
-        <Button prefWidth="200" style="-fx-background-color: #fff;" text="Motion" />
-        <Button prefWidth="200" style="-fx-background-color: #c8a582;" text="Support" />
+        <Button prefWidth="200" style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="Dashboard" />
+        <Button prefWidth="200" style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="Devices" />
+        <Button prefWidth="200" style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="Lights" />
+        <Button prefWidth="200" style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="Motion" />
+        <Button prefWidth="200" style="-fx-background-color: #c8a582; -fx-font-size: 14px; -fx-font-weight: bold; -fx-border-color: #d1b1a1;" text="Support" />
     </VBox>
 
-    <!-- Main Content -->
-    <VBox layoutX="250.0" layoutY="70.0" spacing="15.0">
-        <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Contact Support" />
+    <!-- Main Content Section -->
+    <VBox layoutX="250.0" layoutY="70.0" spacing="20.0" alignment="TOP_LEFT">
+        <!-- Contact Support Information -->
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Contact Support" />
         <Label style="-fx-font-size: 14px; -fx-text-fill: #666;" text="For assistance, please contact us at:" />
-        <Label style="-fx-font-size: 14px; -fx-text-fill: #333;" text="Email: support@example.com" />
-        <Label style="-fx-font-size: 14px; -fx-text-fill: #333;" text="Phone: +1-800-123-4567" />
+
+        <HBox spacing="10" alignment="TOP_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333;" text="Email: " />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #1a73e8;" text="support@example.com" />
+        </HBox>
+
+        <HBox spacing="10" alignment="TOP_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333;" text="Phone: " />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #1a73e8;" text="+1-800-123-4567" />
+        </HBox>
+
+        <!-- Additional Information Section -->
+        <VBox spacing="15.0" alignment="TOP_LEFT">
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Quick Links" />
+            <Button style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="FAQ" />
+            <Button style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="Support Articles" />
+            <Button style="-fx-background-color: #fff; -fx-border-color: #d1b1a1; -fx-font-size: 14px;" text="Live Chat" />
+        </VBox>
     </VBox>
 </AnchorPane>

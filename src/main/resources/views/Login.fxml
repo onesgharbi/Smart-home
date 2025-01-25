@@ -62,7 +62,7 @@
          <RowConstraints />
       </rowConstraints>
     </GridPane>
-   <ImageView fitHeight="558.0" fitWidth="400.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="491.0" fitWidth="417.0" layoutX="-25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../../../../Users/DELL/Pictures/Screenshots/Screenshot%202024-11-30%20181755.png" />
       </image>
